@@ -3,7 +3,17 @@ entries:
   blog:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-10-27T11:04:44.992839364Z"
+    created: "2021-10-27T11:30:42.463851639Z"
+    description: A Helm chart for Kubernetes
+    digest: 2761862cb511b06371034bf5c627c895a5967ebe7a8e9d98747dfc8044ed4070
+    name: blog
+    type: application
+    urls:
+    - blog-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-10-27T11:30:42.463243031Z"
     description: A Helm chart for Kubernetes
     digest: 42801bbc0c7cc0f1e2470031f0d75841adbe42e26080a00ca56a9207f44696f5
     name: blog
@@ -11,4 +21,4 @@ entries:
     urls:
     - blog-0.1.0.tgz
     version: 0.1.0
-generated: "2021-10-27T11:04:44.992079048Z"
+generated: "2021-10-27T11:30:42.462454414Z"
