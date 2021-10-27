@@ -1,4 +1,3 @@
-{{- if .Values.ingress.enabled -}}
 {{- $fullName := include "blog.fullname" . -}}
 {{- $svcPort := .Values.service.port -}}
 {{- if semverCompare ">=1.14-0" .Capabilities.KubeVersion.GitVersion -}}
@@ -27,15 +26,10 @@ spec:
     {{- end }}
   {{- end }}
   rules:
-    {{- range .Values.ingress.hosts }}
-    - host: {{ .host | quote }}
+    - host: "{{ $.Release.Name }}.{{ $.Release.Namespace }}.k8z.eu"
       http:
         paths:
-          {{- range .paths }}
-          - path: {{ .path }}
+          - path: "/"
             backend:
               serviceName: {{ $fullName }}
               servicePort: {{ $svcPort }}
-          {{- end }}
-    {{- end }}
-  {{- end }}

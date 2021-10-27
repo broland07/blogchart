@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: blogconfig
+  name: {{ $.Release.Name }}-blogconfig
 data:
   COLOR: {{ .Values.blog.color }}
   TITLE: {{ .Values.blog.title }} v3
